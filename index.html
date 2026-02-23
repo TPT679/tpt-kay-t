@@ -4,15 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TPT - Türk Polis Teşkilatı</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
     font-family:'Poppins',sans-serif;
     background:#000;
     color:#fff;
     overflow-x:hidden;
 }
+
+/* Dalgalı Türk Bayrağı */
 .flag-bg{
     position:fixed;
     top:0;left:0;
@@ -24,41 +29,65 @@ body{
     background-size:cover;
     background-position:center;
     animation:wave 10s ease-in-out infinite alternate;
-    z-index:-1;
+    z-index:-2;
 }
+
 @keyframes wave{
     0%{background-position:50% 0%}
     100%{background-position:55% 10%}
 }
+
 .container{
     max-width:1100px;
     margin:auto;
     padding:60px 20px;
 }
+
 header{
     text-align:center;
     margin-bottom:50px;
 }
+
 header h1{
     font-size:48px;
     font-weight:800;
 }
+
 .card{
-    background:rgba(15,23,42,0.90);
+    position:relative;
+    background:rgba(15,23,42,0.92);
     padding:30px;
     border-radius:15px;
-    margin-bottom:30px;
+    margin-bottom:40px;
+    overflow:hidden;
 }
+
 .card h2{
     margin-bottom:20px;
     color:#38bdf8;
+    position:relative;
+    z-index:2;
 }
-.team-img{
+
+.card p, .card ul{
+    position:relative;
+    z-index:2;
+}
+
+/* Şeffaf arka plan foto */
+.bg-img{
+    position:absolute;
+    top:0;
+    left:0;
     width:100%;
-    border-radius:12px;
-    margin-top:20px;
+    height:100%;
+    object-fit:cover;
+    opacity:0.25;
+    z-index:1;
 }
+
 ul{line-height:1.8}
+
 .button{
     display:inline-block;
     margin-top:25px;
@@ -70,22 +99,27 @@ ul{line-height:1.8}
     border-radius:10px;
     transition:.3s;
 }
+
 .button:hover{
     background:#be123c;
     transform:scale(1.05);
 }
+
 .center{text-align:center}
+
 footer{
     text-align:center;
     margin-top:40px;
     opacity:.7;
     font-size:14px;
 }
+
 @media(max-width:768px){
     header h1{font-size:30px}
 }
 </style>
 </head>
+
 <body>
 
 <div class="flag-bg"></div>
@@ -97,17 +131,21 @@ footer{
 <p>Car Parking Multiplayer Resmi Polis Birimi</p>
 </header>
 
+<!-- HAKKIMIZDA -->
 <div class="card">
+<img src="https://raw.githubusercontent.com/TPT679/tpt-kay-t/main/resimtpt.jpg" class="bg-img">
+
 <h2>Hakkımızda</h2>
 <p>
 TPT, disiplinli ve aktif görev yapan resmi polis ekibidir.
-Sunucu düzenini sağlamak ve ekip ruhunu korumak temel amacımızdır.
+Sunucu düzenini sağlamak, ekip ruhunu korumak ve roleplay kalitesini artırmak temel amacımızdır.
 </p>
-
-<img src="https://raw.githubusercontent.com/TPT679/tpt-kay-t/main/resimtpt.jpg" class="team-img">
 </div>
 
+<!-- KURALLAR -->
 <div class="card">
+<img src="https://raw.githubusercontent.com/TPT679/tpt-kay-t/main/resimtpt.jpg" class="bg-img">
+
 <h2>Disiplin Kuralları</h2>
 <ul>
 <li>Üst rütbeye saygı zorunludur.</li>
@@ -118,6 +156,7 @@ Sunucu düzenini sağlamak ve ekip ruhunu korumak temel amacımızdır.
 </ul>
 </div>
 
+<!-- BAŞVURU -->
 <div class="card center">
 <h2>Kayıt Başvurusu</h2>
 <p>Başvurular yalnızca Instagram üzerinden alınmaktadır.</p>
