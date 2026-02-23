@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TPT - Türk Polis Teşkilatı</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -15,7 +16,7 @@ body{
     color:#fff;
 }
 
-/* Türk Bayrağı Arka Plan */
+/* Dalgalı Türk Bayrağı */
 body::before{
     content:"";
     position:fixed;
@@ -24,25 +25,60 @@ body::before{
     width:100%;
     height:100%;
     background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
     url('https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg');
     background-size:cover;
     background-position:center;
-    z-index:-3;
+    animation:wave 12s ease-in-out infinite alternate;
+    z-index:-5;
 }
 
-/* Ortak Kart */
+@keyframes wave{
+    0%{background-position:50% 0%}
+    100%{background-position:55% 15%}
+}
+
+header{
+    text-align:center;
+    padding:60px 20px 20px 20px;
+}
+
+header h1{
+    font-size:48px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+header p{
+    opacity:0.9;
+}
+
+/* Kart Tasarım */
 .card{
     position:relative;
     max-width:1000px;
-    margin:50px auto;
+    margin:40px auto;
     padding:40px;
-    background:rgba(15,23,42,0.92);
+    background:rgba(15,23,42,0.93);
     border-radius:15px;
     overflow:hidden;
 }
 
-/* Yazı */
+/* Şeffaf Arka Plan Görsel */
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("https://raw.githubusercontent.com/TPT679/tpt-kay-t/main/resimtpt.jpg");
+    background-size:cover;
+    background-position:center;
+    opacity:0.25;
+    z-index:1;
+}
+
 .card h2,
 .card p,
 .card ul{
@@ -57,36 +93,6 @@ body::before{
 
 .card ul{
     line-height:1.8;
-}
-
-/* Şeffaf Arka Plan Foto */
-.card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:url("https://raw.githubusercontent.com/TPT679/tpt-kay-t/main/resimtpt.jpg");
-    background-size:cover;
-    background-position:center;
-    opacity:0.25; /* Şeffaflık */
-    z-index:1;
-}
-
-/* Başlık */
-header{
-    text-align:center;
-    margin-top:60px;
-}
-
-header h1{
-    font-size:48px;
-    font-weight:800;
-}
-
-header p{
-    opacity:0.9;
 }
 
 /* Buton */
@@ -134,7 +140,7 @@ footer{
 <h2>Hakkımızda</h2>
 <p>
 TPT, disiplinli ve aktif görev yapan resmi polis ekibidir.
-Sunucu düzenini sağlamak ve ekip ruhunu korumak temel amacımızdır.
+Sunucu düzenini sağlamak, ekip ruhunu korumak ve roleplay kalitesini artırmak temel amacımızdır.
 </p>
 </div>
 
@@ -160,7 +166,7 @@ Oyun Nicki<br>
 Günlük Aktiflik Süresi
 </p>
 
-<a href="https://instagram.com/tpt079" target="_blank" class="button">
+<a href="https://www.instagram.com/tpt079/" target="_blank" class="button">
 Instagram'dan Başvur
 </a>
 </div>
